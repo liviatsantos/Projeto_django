@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    {% include 'receitas/pages/head.html' %}
+    <title>{% block title %}{% endblock title %} Receitas</title> 
+</head>    
+<body>
+    {% include 'receitas/pages/header.html' %} 
+    {% include 'receitas/pages/search.html' %}
+
+    <main class="main-content-container">
+       {% block content %}{% endblock content %}
+    </main>
+    {% include 'receitas/pages/footer.html' %}
+</body>
+</html>
