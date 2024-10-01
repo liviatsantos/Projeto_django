@@ -12,21 +12,23 @@
     <div class="receita-autor">
         <span class="receita-autor-item">
             <i class="fas fa-user"></i>
-            {{receita.autor.primeiro_nome}} {{receita.autor.ultimo_nome}}
+            {{receita.autor.first_name}} {{receita.autor.last_name}}
         </span>
         <span class="receita-autor-item">
             <i class="fas fa-calendar-alt"></i>
             {{ receita.data_criacao }}
         </span>
-        <span class="receita-autor-item">
-            <a href="receitas/categoria/cafe-da-manha">
-                <i class="fas fa-layer-group"></i>
-                <span>{{receita.categoria.nome}}</span>
-            </a>
-        </span>
+        {% if receita.categoria is not None %}
+            <span class="receita-autor-item">
+                <a href="{% url 'receitas-categoria' receita.categoria.id %}">
+                    <i class="fas fa-layer-group"></i>
+                    <span>{{receita.categoria.nome}}</span>
+                </a>
+            </span>
+        {% endif %}
     </div>
     <div class="receita-conteudo">
-        <p>{{receita.descricao}}</p>
+        <p>{{receita.decricao}}</p>
     </div>
     <div class="receita-meta-container">
         <div class="receita-meta receita-preparacao">

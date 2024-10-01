@@ -22,6 +22,7 @@ def make_receita():
             'ultimo_nome' : fake.last_name(), 
         },
         'categoria' : {
+            'id' : fake.random_number(digits=1, fix_len=True),
             'nome' : fake.word()
         },
         'capa' : {
