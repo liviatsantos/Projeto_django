@@ -5,6 +5,8 @@
         <div class="main-content main-content-lista container">
             {% for receita in receitas %}  
                 {% include 'receitas/pages/receita.html' %}
+            {% empty %}
+                <h1>Sem receitas publicada.</h1>
             {% endfor %}
         </div>
 {% endblock content %}

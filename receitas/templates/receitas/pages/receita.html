@@ -54,4 +54,10 @@
     </footer>
     {% endif %}
 
+    {% if is_detail_page is True %}
+    <div class="modo-preparacao">
+        {{receita.modo_preparacao}}
+    </div>
+    {% endif %}
+
 </div>

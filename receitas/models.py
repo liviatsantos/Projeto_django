@@ -18,7 +18,6 @@ class Receita(models.Model):
     porcoes = models.IntegerField()
     porcoes_unidade = models.CharField(max_length=12)
     modo_preparacao = models.TextField()
-    modo_preparacao_is_html = models.BooleanField(default=False)
     data_criacao = models.DateTimeField(auto_now_add=True)
     data_atualizacao = models.DateTimeField(auto_now=True)
     is_publicado = models.BooleanField(default=False)
